@@ -10,7 +10,7 @@ import ssd1306
 # Station Mode Setup
 wifi = network.WLAN(network.STA_IF)
 wifi.active(True)
-wifi.connect("Talha", "_--_--_--")
+wifi.connect("TECNO SPARK 8C", "safder510")
 
 # Access Point mode setup
 ap = network.WLAN(network.AP_IF)
@@ -180,7 +180,7 @@ def WebPage():
 
 sensor = dht.DHT11(Pin(4))
 neo = neopixel.NeoPixel(Pin(48),1)
-i2c = SoftI2C( sda = Pin(8), scl = Pin(9))
+i2c = SoftI2C( sda = Pin(9), scl = Pin(8))
 oled = ssd1306.SSD1306_I2C(128, 64, i2c)
 def SendTemperature():
     try:
